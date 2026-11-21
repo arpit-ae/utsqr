@@ -684,3 +684,21 @@ button:active {
     transform: translateY(0);
   }
 }
+
+/* Enhanced railway directory theme */
+body{background:radial-gradient(ellipse at 10% 0%,#173b52 0%,#081523 53%,#070e1d 100%);color:#eaf2ff;}
+.hero{background:transparent;border-bottom:1px solid rgba(148,163,184,.15);}
+.hero h1{font-size:clamp(2.8rem,6.5vw,5.4rem);line-height:1.08;letter-spacing:-.045em;background:linear-gradient(110deg,#effaff,#70e9ce,#87bdff);background-clip:text;-webkit-background-clip:text;color:transparent;}
+.panel{background:#102337ee;border:1px solid #33516a;box-shadow:0 20px 35px #02061735;}
+.site-title-link strong{color:#86efdc;}
+.eyebrow{color:#7ce7d7;letter-spacing:.1em;}
+input{background:#0b1c2c;color:#eef6ff;border:1px solid #4a6178;}
+input::placeholder{color:#98afc2;}
+.site-button-github{background:#183148;border-color:#3d6177;}
+.site-button-github .text,.top-quick-links a,.footer-inner a{color:#e5f5ff;}
+button,.issue-btn{background:linear-gradient(100deg,#67e8d5,#7ac3ff);color:#062130;}
+.secondary-btn,.tiny-btn{background:#20384c;color:#e9f7ff;border:1px solid #47627b;}
+.result-empty,.meta,.disclaimer p,.footer,.fav-empty{color:#afc3d4;}
+.footer{background:#091725;border-color:#29455a;}
+.fav-pill,.submit-item{background:#1a3043;border-color:#47627b;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
