@@ -1,199 +1,224 @@
 <!doctype html>
 <html lang="en-IN">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kanish Station QR: an independent, unofficial station QR directory with quick station lookup, favorites and preview." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  
-  <meta name="theme-color" content="#081523" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:site_name" content="Kanish Station QR" />
-  <meta property="og:title" content="Kanish Station QR - Find Station QR Codes Fast" />
-  <meta property="og:description" content="Find UTS station QR codes by state and station code in seconds." />
-  <meta property="og:url" content="https://utsqr-station-directory.pages.dev/" />
-  <meta property="og:image" content="assets/icons/icon-512.svg" />
-  <meta property="og:image:alt" content="Kanish Station QR icon" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kanish Station QR - Find Station QR Codes Fast" />
-  <meta name="twitter:description" content="Find UTS station QR codes by state and station code in seconds." />
-  <meta name="twitter:image" content="assets/icons/icon-512.svg" />
-  <link rel="canonical" href="https://utsqr-station-directory.pages.dev/" />
-  <link rel="alternate" hreflang="en-IN" href="https://utsqr-station-directory.pages.dev/" />
-  <title>Station QR Directory — Fast Station Lookup</title>
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg" />
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071626">
+  <meta name="description" content="Kanish Station QR — a beautifully simple, independent railway station QR directory. Explore by state and station code, preview entries and save favorites.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kanish Station QR">
+  <meta property="og:title" content="Kanish Station QR | Find your station, beautifully.">
+  <meta property="og:description" content="Discover station QR references in a fast, easy-to-use, independent directory. Created by Kanish.">
+  <meta property="og:url" content="https://utsqr-station-directory.pages.dev/">
+  <meta property="og:image" content="https://utsqr-station-directory.pages.dev/assets/icons/icon-512.svg">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://utsqr-station-directory.pages.dev/">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Kanish Station QR | A smarter station directory</title>
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Kanish Station QR",
-      "description": "Unofficial Kanish station QR directory for daily commuters.",
-      "url": "https://utsqr-station-directory.pages.dev/",
-      "inLanguage": "en-IN",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://utsqr-station-directory.pages.dev/?state={state_code}&station={station_code}",
-        "query-input": [
-          "required name=state_code",
-          "required name=station_code"
-        ]
-      }
-    }
+  {"@context":"https://schema.org","@type":"WebSite","name":"Kanish Station QR","url":"https://utsqr-station-directory.pages.dev/","description":"Independent and unofficial railway station QR directory created by Kanish","inLanguage":"en-IN"}
   </script>
-  
 </head>
-
 <body>
-  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
-  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+  <div class="reading-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="background-orb background-orb--a" aria-hidden="true"></div>
+  <div class="background-orb background-orb--b" aria-hidden="true"></div>
+  <div class="background-orb background-orb--c" aria-hidden="true"></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <a class="skip-link" href="#directory">Skip to station search</a>
 
-  <header class="hero">
-    <div class="site-topbar">
-      <a class="site-title-link" href="index.html">
-        <strong>Kanish <span class="brand-highlight">Station QR</span></strong>
-      </a>
-      <nav class="top-quick-links" aria-label="Quick links">
-        <a href="https://github.com/arpit-ae/utsqr/issues" target="_blank" rel="noopener noreferrer">Contact Kanish</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="https://play.google.com/store/apps/details?id=org.cris.aikyam&amp;hl=en_IN" target="_blank"
-          rel="noopener noreferrer">Android App</a>
-        <a href="https://apps.apple.com/in/app/railone/id6473384334" target="_blank" rel="noopener noreferrer">iOS
-          App</a>
-      </nav>
-      <div class="top-status-rotator" aria-live="polite">
-        <span id="header-status-pill" class="status-pill"></span>
-      </div>
-      <a class="site-button-github" href="https://github.com/arpit-ae/utsqr" target="_blank"
-        rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" class="logo"
-          aria-hidden="true" focusable="false">
-          <title>Github logo</title>
-          <path fill="#161514" fill-rule="evenodd"
-            d="M16.288 0C7.294 0 0 7.293 0 16.29c0 7.197 4.667 13.302 11.14 15.456.815.15 1.112-.353 1.112-.785 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184-.741-1.882-1.809-2.383-1.809-2.383-1.479-1.01.112-.99.112-.99 1.635.115 2.495 1.679 2.495 1.679 1.453 2.489 3.813 1.77 4.741 1.353.148-1.052.569-1.77 1.034-2.177-3.617-.411-7.42-1.809-7.42-8.051 0-1.778.635-3.233 1.677-4.371-.168-.412-.727-2.069.16-4.311 0 0 1.367-.438 4.479 1.67a15.602 15.602 0 0 1 4.078-.549 15.62 15.62 0 0 1 4.078.549c3.11-2.108 4.475-1.67 4.475-1.67.889 2.242.33 3.899.163 4.311 1.044 1.138 1.674 2.593 1.674 4.371 0 6.258-3.809 7.635-7.437 8.038.584.503 1.105 1.497 1.105 3.017 0 2.177-.02 3.934-.02 4.468 0 .436.294.943 1.12.784 6.468-2.159 11.131-8.26 11.131-15.455C32.579 7.293 25.285 0 16.288 0">
-          </path>
-        </svg>
-        <span class="text">Kanish GitHub</span>
-      </a>
-    </div>
-
-    <p class="eyebrow">BY KANISH · INDEPENDENT STATION DIRECTORY</p>
-    <h1>Kanish Station QR<br><span class="brand-highlight">Find your station faster.</span></h1>
-    <p class="hero-copy">
-      Search station QR entries by state and station code in seconds.
-      Designed for fast access when you are on the move.
-    </p>
-    <div class="hero-actions">
-      <button id="install-btn" class="secondary-btn" type="button" hidden>Install App</button>
-      <p id="offline-note" class="offline-note">Works better when installed as a PWA for quick launch.</p>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="panel favorites-panel" aria-labelledby="favorites-title">
-      <div class="favorites-head">
-        <h2 id="favorites-title">Quick Access</h2>
-        <button id="clear-favorites-btn" class="tiny-btn" type="button">Clear All</button>
-      </div>
-      <div id="favorites-list" class="favorites-list" aria-live="polite"></div>
-    </section>
-
-    <section class="finder-section" aria-label="Find and result">
-      <section class="panel search-panel" aria-labelledby="search-title">
-        <h2 id="search-title">Find QR Code</h2>
-
-        <form id="search-form" class="search-grid" autocomplete="off">
-          <label class="field" for="state-input">
-            <span>State / UT</span>
-            <input id="state-input" list="state-options" placeholder="Type code or name (example: DL or Delhi)" />
-            <datalist id="state-options"></datalist>
-          </label>
-
-          <label class="field" for="station-input">
-            <span>Station Code</span>
-            <input id="station-input" list="station-options" placeholder="Type station code (example: NDLS)" />
-            <datalist id="station-options"></datalist>
-          </label>
-
-          <button id="find-btn" type="submit">Show QR</button>
-        </form>
-
-        <div class="action-row">
-          <button id="share-btn" class="secondary-btn" type="button">Copy Share Link</button>
-          <button id="favorite-btn" class="secondary-btn" type="button" disabled>Add to Favorites</button>
+  <div class="site-wrap">
+    <header class="site-header" id="top">
+      <div class="topbar">
+        <a class="brand-lockup" href="#top" aria-label="Kanish Station QR homepage">
+          <span class="brand-icon" aria-hidden="true"><span>K</span><i></i></span>
+          <span class="brand-copy"><strong>KANISH<span class="brand-dot">.</span></strong><small>STATION QR DIRECTORY</small></span>
+        </a>
+        <nav class="top-quick-links" aria-label="Main navigation">
+          <a href="#directory">Find a station</a>
+          <a href="#features">Features</a>
+          <a href="#about-kanish">About Kanish</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="topbar-actions">
+          <span class="live-dot" aria-hidden="true"></span><span id="header-status-pill" class="status-pill">Independent Directory</span>
+          
+          <a class="topbar-cta" href="#directory">Explore <span aria-hidden="true">↗</span></a>
         </div>
+      </div>
+    </header>
 
-        <p id="meta-info" class="meta" aria-live="polite"></p>
-        <p id="action-status" class="meta" aria-live="polite"></p>
-      </section>
-
-      <section class="panel result-panel" aria-labelledby="result-title">
-        <h2 id="result-title">Result</h2>
-        <div id="result" class="result-empty" aria-live="polite">
-          Select a state and station code to view the QR.
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-left">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A THOUGHTFUL DIGITAL EXPERIENCE <span class="eyebrow-shine">✦</span></div>
+          <h1 id="hero-title">Every station.<br><span class="gradient-text">One beautiful</span><br>way to find it<span class="punctuation">.</span></h1>
+          <p class="hero-copy">A calmer, faster way to explore railway station QR references. Search by state, discover station codes, preview available entries and keep favorites close.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#directory"><span class="button-sparkle" aria-hidden="true">✦</span> Explore stations <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#about-kanish">The story behind it <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta">
+            <div class="mini-avatars" aria-hidden="true"><span>K</span><span>Q</span><span>R</span></div>
+            <div><strong>Made with intention.</strong><small>Designed and maintained by Kanish</small></div>
+          </div>
+        </div>
+        <div class="hero-right" aria-label="Decorative railway route visualization">
+          <div class="visual-glow" aria-hidden="true"></div>
+          <div class="visual-panel">
+            <div class="visual-panel-head">
+              <span class="visual-panel-logo"><span class="tiny-signal"></span> KANISH / DIRECTORY</span>
+              <span class="visual-panel-badge">01 / EXPLORE</span>
+            </div>
+            <div class="network-board">
+              <div class="network-grid" aria-hidden="true"></div>
+              <svg class="route-illustration" viewBox="0 0 430 340" aria-hidden="true" focusable="false">
+                <defs><linearGradient id="routeFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#76fbd1"/><stop offset="1" stop-color="#68aafb"/></linearGradient></defs>
+                <path d="M-20 230 C80 230, 70 110, 174 110 S315 265, 460 148" fill="none" stroke="rgba(150,206,236,.11)" stroke-width="56" stroke-linecap="round"/>
+                <path class="animated-route" d="M-20 230 C80 230, 70 110, 174 110 S315 265, 460 148" fill="none" stroke="url(#routeFade)" stroke-width="2.5" stroke-dasharray="6 10" stroke-linecap="round"/>
+                <path d="M78 42 L78 305 M305 25 L305 310" stroke="rgba(194,229,243,.14)" stroke-width="1" stroke-dasharray="3 8"/>
+                <circle cx="74" cy="185" r="14" fill="#092337" stroke="#77f5d7" stroke-width="2"/><circle cx="74" cy="185" r="4" fill="#77f5d7"/>
+                <circle cx="174" cy="110" r="21" fill="rgba(111,242,215,.15)" stroke="#9aefdd" stroke-width="2"/><circle cx="174" cy="110" r="6" fill="#9aefdd"/>
+                <circle cx="296" cy="204" r="14" fill="#092337" stroke="#7dbbff" stroke-width="2"/><circle cx="296" cy="204" r="4" fill="#7dbbff"/>
+                <circle cx="385" cy="194" r="7" fill="#bce6ff"/>
+                <text x="50" y="225" fill="#a5c6d8" font-size="11" font-family="monospace">01</text>
+                <text x="158" y="72" fill="#effffb" font-size="11" font-family="monospace">STATION</text>
+                <text x="284" y="250" fill="#bddaff" font-size="11" font-family="monospace">03</text>
+              </svg>
+              <div class="floating-ticket floating-ticket--top">
+                <div class="ticket-icon" aria-hidden="true">⌁</div>
+                <span><strong>Find stations</strong><small>By code or state</small></span>
+                <span class="ticket-arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="floating-ticket floating-ticket--bottom">
+                <span class="tiny-qr" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                <span><strong>Simple QR previews</strong><small>All in one place</small></span>
+              </div>
+            </div>
+            <div class="visual-panel-foot">
+              <span><span class="foot-pulse"></span> DESIGNED FOR EVERY COMMUTER</span><span>EST. 2026</span>
+            </div>
+          </div>
+          <div class="visual-decoration visual-decoration-one" aria-hidden="true">✧</div>
+          <div class="visual-decoration visual-decoration-two" aria-hidden="true">✳</div>
         </div>
       </section>
-    </section>
 
-    <section class="panel disclaimer" aria-labelledby="notice-title">
-      <h2 id="notice-title">Notice</h2>
-      <p>
-        Kanish Station QR is an independent, unofficial commuter directory. QR assets belong to their respective rights holders.
-        The owner retains full rights over all QR codes.
-      </p>
-      <p>Station QR images may have third-party rights. This is an independent directory, not an official railway service. See <a href="disclaimer.html">Disclaimer</a> and <a href="LICENSE">License</a>.</p>
-      <p>
-        Some station entries are currently marked as missing and will be added later.
-      </p>
-    </section>
-
-    <section class="panel submit-panel" aria-labelledby="submit-title">
-      <h2 id="submit-title">Share Missing QR Code via GitHub Issue</h2>
-      <p class="submit-intro">
-        Have a missing station QR? Please open a GitHub issue and upload the QR image in the issue description or
-        comments.
-      </p>
-
-      <div class="submit-issue-actions">
-        <a class="issue-btn"
-          href="https://github.com/arpit-ae/utsqr/issues/new?title=Add%20Missing%20UTS%20QR%20Code&body=Please%20fill%20the%20details%20below.%0A%0AState%2FUT%20Code%3A%20%0AStation%20Code%3A%20%0AStation%20Name%3A%20%0A%0APlease%20attach%20or%20drag%20the%20QR%20image%20in%20this%20issue.%0ASource%20or%20notes%3A%20"
-          target="_blank" rel="noopener noreferrer">Create GitHub Issue</a>
-        <a class="issue-btn secondary-btn" href="https://github.com/arpit-ae/utsqr/issues" target="_blank"
-          rel="noopener noreferrer">View Existing Issues</a>
+      <div class="marquee-outer" aria-hidden="true">
+        <div class="marquee-track">
+          <span>DISCOVER THE DIRECTORY</span><i>✦</i><span>SEARCH WITH EASE</span><i>✦</i><span>SAVE YOUR FAVORITES</span><i>✦</i><span>CURATED BY KANISH</span><i>✦</i>
+          <span>DISCOVER THE DIRECTORY</span><i>✦</i><span>SEARCH WITH EASE</span><i>✦</i><span>SAVE YOUR FAVORITES</span><i>✦</i><span>CURATED BY KANISH</span><i>✦</i>
+        </div>
       </div>
 
-      <div class="submit-history">
-        <h3>How to Submit Properly</h3>
-        <ul class="issue-steps">
-          <li>Click Create GitHub Issue.</li>
-          <li>Fill state code, station code, and station name.</li>
-          <li>Upload QR image directly in the issue.</li>
-          <li>Submit issue. Submissions can be reviewed for possible inclusion.</li>
-        </ul>
+      <section class="stats-section" aria-label="Directory statistics">
+        <div class="stats-note"><span class="stats-orb">✳</span><div><strong>A growing collection.</strong><small>Entries loaded from our directory.</small></div></div>
+        <div class="stat"><strong id="total-stations">—</strong><span>Station entries</span></div>
+        <div class="stat"><strong id="total-states">—</strong><span>States &amp; UTs</span></div>
+        <div class="stat"><strong id="total-qr">—</strong><span>Available QR entries</span></div>
+      </section>
+
+      <section id="directory" class="directory-section" aria-labelledby="search-title">
+        <div class="section-topline"><span class="section-index">01 / THE DIRECTORY</span><span class="section-topline-right">YOUR NEXT STATION STARTS HERE <span aria-hidden="true">↘</span></span></div>
+        <div class="section-intro">
+          <div><span class="section-kicker">FIND A STATION</span><h2>Find it in a <em>moment.</em></h2></div>
+          <p>Type a state or station code. Everything else stays beautifully simple.</p>
+        </div>
+        <div class="finder-section">
+          <section class="panel search-panel" aria-labelledby="search-title">
+            <div class="panel-header"><div><span class="micro-label">STATION FINDER / 01</span><h3 id="search-title">Where are you looking?</h3></div><span class="panel-header-icon" aria-hidden="true">⌕</span></div>
+            <form id="search-form" class="search-grid" autocomplete="off">
+              <label class="field" for="state-input"><span><span class="field-number">01</span> State or union territory</span><input id="state-input" list="state-options" placeholder="e.g. Bihar or BR" autocapitalize="characters" aria-describedby="search-help"><datalist id="state-options"></datalist></label>
+              <label class="field" for="station-input"><span><span class="field-number">02</span> Station code</span><input id="station-input" list="station-options" placeholder="e.g. PNBE or NDLS" autocapitalize="characters"><datalist id="station-options"></datalist></label>
+              <button id="find-btn" class="find-btn" type="submit">Find station <span aria-hidden="true">↗</span></button>
+            </form>
+            <p class="search-help" id="search-help">Tip: type a state name first to narrow down station suggestions. Press <kbd>/</kbd> to start searching.</p>
+            <div class="quick-access-row"><span class="micro-label">EXPLORE QUICKLY</span><div id="quick-picks" class="quick-picks"><span class="quick-loading">Loading suggestions…</span></div></div>
+            <div class="action-row">
+              <button id="share-btn" class="secondary-btn" type="button"><span aria-hidden="true">↗</span> Copy share link</button>
+              <button id="favorite-btn" class="secondary-btn" type="button" disabled><span aria-hidden="true">♡</span> Add to favorites</button>
+            </div>
+            <p id="meta-info" class="meta" aria-live="polite"></p>
+            <p id="action-status" class="meta action-status" aria-live="polite"></p>
+          </section>
+          <section class="panel result-panel" aria-labelledby="result-title">
+            <div class="panel-header"><div><span class="micro-label">YOUR PREVIEW / 02</span><h3 id="result-title">Station preview</h3></div><span class="panel-header-icon" aria-hidden="true">▦</span></div>
+            <div id="result" class="result-empty" aria-live="polite">
+              <div class="empty-icon" aria-hidden="true"><span>⌘</span><i></i></div>
+              <strong>Make your next discovery.</strong>
+              <p>Choose your state and station to view a QR entry from the directory.</p>
+            </div>
+            <p class="result-disclaimer">Unofficial reference only. Verify station information with the official railway application.</p>
+          </section>
+        </div>
+
+        <section class="panel favorites-panel" aria-labelledby="favorites-title">
+          <div class="favorites-head">
+            <div class="favorites-heading"><span class="favorites-icon" aria-hidden="true">♡</span><div><span class="micro-label">YOUR SHORTCUTS</span><h3 id="favorites-title">Saved stations</h3></div></div>
+            <button id="clear-favorites-btn" class="tiny-btn" type="button">Clear all</button>
+          </div>
+          <div id="favorites-list" class="favorites-list" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <section id="features" class="features-section" aria-labelledby="features-title">
+        <div class="section-topline"><span class="section-index">02 / DESIGNED WITH PURPOSE</span><span class="section-topline-right">LESS FRICTION. MORE FLOW.</span></div>
+        <div class="section-intro"><div><span class="section-kicker">THE LITTLE DETAILS</span><h2>A better journey, <em>digitally.</em></h2></div><p>Thoughtful tools, polished details and the essentials right where you need them.</p></div>
+        <div class="features-grid">
+          <article class="feature-card feature-card--spotlight">
+            <span class="feature-nr">01 — DISCOVER</span><div class="feature-art feature-art--search" aria-hidden="true"><span class="search-art-input"><i>⌕</i> BR · Bihar</span><span class="search-art-pill">→ PNBE</span></div>
+            <div class="feature-copy"><h3>Search without the clutter.</h3><p>Explore station entries by code or state with instant, familiar suggestions.</p></div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-nr">02 — PREVIEW</span><div class="feature-art feature-art--qr" aria-hidden="true"><div class="mock-qr"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><span>VISUAL PREVIEW</span></div>
+            <div class="feature-copy"><h3>See what you found.</h3><p>Open available directory QR entries with clear status and feedback.</p></div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-nr">03 — REMEMBER</span><div class="feature-art feature-art--favorite" aria-hidden="true"><span>♡</span><span class="favorite-stars">✧ ✦ ✧</span></div>
+            <div class="feature-copy"><h3>Keep favorites close.</h3><p>Save frequently used entries on your own device for easy repeat access.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about-kanish" aria-labelledby="about-title">
+        <div class="about-visual" aria-hidden="true"><span class="about-orbit about-orbit-a"></span><span class="about-orbit about-orbit-b"></span><span class="about-monogram">K<span>.</span></span><small>CREATED WITH CURIOSITY</small></div>
+        <div class="about-copy"><span class="section-index">03 / MEET THE MAKER</span><span class="section-kicker">A NOTE FROM KANISH</span><h2 id="about-title">Human ideas.<br><em>Thoughtful pixels.</em></h2>
+          <p>Hi, I'm <strong>Kanish.</strong> This station directory is a small example of the web experience I love to create: visually considered, easy to navigate, and useful on the move.</p>
+          <p>My focus here is straightforward — make discovering station QR references feel effortless. Every interaction is designed to be simple, smooth and accessible.</p>
+          <div class="about-signature"><span class="signature-line"></span><strong>Kanish</strong><small>Creator &amp; maintainer · Independent project</small></div>
+          <a class="about-link" href="https://github.com/arpit-ae/utsqr" target="_blank" rel="noopener noreferrer">Visit the project on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="contribute-section" id="contact" aria-labelledby="contribute-title">
+        <div class="contribute-glow" aria-hidden="true"></div>
+        <div class="contribute-content"><span class="section-index">04 / LET'S MAKE IT BETTER</span><h2 id="contribute-title">Know a missing station?<br><em>Let's improve the directory.</em></h2><p>Found a missing QR entry or want to report a correction? Open a GitHub issue with the station code and state. Avoid posting private information.</p>
+          <div class="contribute-actions"><a class="button button-primary" href="https://github.com/arpit-ae/utsqr/issues/new?title=Station%20QR%20Directory%20Contribution&body=State%2FUT%3A%20%0AStation%20code%3A%20%0ADetails%20or%20source%3A%20" target="_blank" rel="noopener noreferrer">Submit a station issue <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://github.com/arpit-ae/utsqr/issues" target="_blank" rel="noopener noreferrer">View requests <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="contribute-mark" aria-hidden="true">K</div>
+      </section>
+
+      <section class="notice-panel" aria-labelledby="notice-title"><span class="notice-icon" aria-hidden="true">i</span><div><h3 id="notice-title">A note on authenticity</h3><p>Kanish Station QR is an independent, unofficial informational directory. It is not affiliated with Indian Railways or any booking service. QR image assets may be owned by third parties; their rights remain with those owners. A directory entry does not guarantee ticketing validity. <a href="disclaimer.html">Read our disclaimer</a> and <a href="LICENSE">license notice</a>.</p></div></section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-main"><a href="#top" class="footer-brand">KANISH<span>.</span></a><p>Making a little corner of the internet more beautiful and useful.</p><span class="footer-sub">STATION QR DIRECTORY · AN INDEPENDENT PROJECT</span></div>
+        <div class="footer-links"><div><strong>EXPLORE</strong><a href="#directory">Directory</a><a href="#features">Features</a><a href="#about-kanish">About Kanish</a></div><div><strong>INFORMATION</strong><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a><a href="LICENSE">Source code license</a></div><div><strong>CONNECT</strong><a href="https://github.com/arpit-ae/utsqr" target="_blank" rel="noopener noreferrer">GitHub project ↗</a><a href="https://github.com/arpit-ae/utsqr/issues" target="_blank" rel="noopener noreferrer">Contact / Issues ↗</a></div></div>
+        <div class="footer-bottom"><span>© <span id="current-year">2026</span> Kanish. Designed with care.</span><span>MADE TO MOVE WITH YOU <span aria-hidden="true">✦</span></span><a href="#top">Back to top ↑</a></div>
       </div>
-    </section>
+    </footer>
+  </div>
 
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="copyright-row">© 2026 Kanish · Station QR Directory. Independently maintained by Kanish. <a href="LICENSE">Source code license</a> · <a href="disclaimer.html">Unofficial service notice</a> · <a href="https://github.com/arpit-ae/utsqr/issues" target="_blank" rel="noopener noreferrer">Contact</a>.</p>
-    </div>
-  </footer>
-
+  <button id="install-btn" class="install-float" type="button" hidden>✦ Install directory</button>
   <script src="data/manifest.js"></script>
   <script src="app.js"></script>
 </body>
-
 </html>
