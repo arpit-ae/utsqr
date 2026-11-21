@@ -501,4 +501,78 @@
   shareBtn.addEventListener("click", copyShareLink);
   favoriteBtn.addEventListener("click", addCurrentToFavorites);
   clearFavoritesBtn.addEventListener("click", clearFavorites);
+
+  // Lightweight landing-page enhancements, sourced only from the bundled manifest.
+  function setupKanishExperience() {
+    const totalStates = document.getElementById("total-states");
+    const totalStations = document.getElementById("total-stations");
+    const totalQr = document.getElementById("total-qr");
+    const fmt = new Intl.NumberFormat("en-IN");
+    if (totalStates) totalStates.textContent = fmt.format(states.length);
+    if (totalStations) totalStations.textContent = fmt.format(allStations.length);
+    if (totalQr) totalQr.textContent = fmt.format(allStations.filter((entry) => entry.status === "available").length);
+
+    const year = document.getElementById("current-year");
+    if (year) year.textContent = String(new Date().getFullYear());
+
+    const quickPicks = document.getElementById("quick-picks");
+    if (quickPicks) {
+      quickPicks.replaceChildren();
+      const preferred = ["PNBE", "NDLS", "HWH", "CSMT", "BPL", "ADI", "SBC"];
+      const available = allStations.filter((entry) => entry.status === "available");
+      const suggestions = [];
+      const seen = new Set();
+      for (const code of preferred) {
+        const entry = available.find((item) => item.code === code);
+        if (entry && !seen.has(entry.stateCode + entry.code)) {
+          suggestions.push(entry);
+          seen.add(entry.stateCode + entry.code);
+        }
+      }
+      for (const entry of available) {
+        if (suggestions.length >= 5) break;
+        if (seen.has(entry.stateCode + entry.code)) continue;
+        suggestions.push(entry);
+        seen.add(entry.stateCode + entry.code);
+      }
+      for (const entry of suggestions.slice(0, 5)) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "quick-pick";
+        button.textContent = entry.code + " · " + entry.stateCode + " ↗";
+        button.setAttribute("aria-label", "Preview station " + entry.code + " in " + entry.stateName);
+        button.addEventListener("click", () => {
+          setInputLabels(entry.stateCode, entry.code);
+          runSearch();
+          const section = document.getElementById("directory");
+          if (section) section.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+        });
+        quickPicks.appendChild(button);
+      }
+      if (!quickPicks.childElementCount) {
+        quickPicks.textContent = "No available quick picks.";
+      }
+    }
+
+    const bar = document.getElementById("scroll-progress");
+    if (bar) {
+      const updateProgress = () => {
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - doc.clientHeight;
+        bar.style.width = (max > 0 ? Math.min(100, Math.max(0, 100 * doc.scrollTop / max)) : 0) + "%";
+      };
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress, { passive: true });
+      updateProgress();
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "/" || event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return;
+      const target = event.target;
+      if (target && (target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName))) return;
+      event.preventDefault();
+      stateInput.focus();
+    });
+  }
+  setupKanishExperience();
 })();
