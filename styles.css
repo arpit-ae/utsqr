@@ -702,3 +702,8 @@ button,.issue-btn{background:linear-gradient(100deg,#67e8d5,#7ac3ff);color:#0621
 .footer{background:#091725;border-color:#29455a;}
 .fav-pill,.submit-item{background:#1a3043;border-color:#47627b;}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Kanish brand refinements */
+.brand-highlight{background:linear-gradient(100deg,#64edce,#8dc8ff);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.site-title-link strong{font-weight:800;letter-spacing:-.03em;}
+.site-topbar a:focus-visible,.policy-back:focus-visible{outline:2px solid #80e6d7;outline-offset:3px;}
