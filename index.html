@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071626">
-  <meta name="description" content="Kanish Station QR — a beautifully simple, independent railway station QR directory. Explore by state and station code, preview entries and save favorites.">
+  <meta name="theme-color" content="#1b1026">
+  <meta name="description" content="Kanish Station QR — a dreamy, love-inspired railway QR directory. Discover station codes, preview QR entries and save your favorites, crafted with care by Kanish.">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kanish Station QR">
-  <meta property="og:title" content="Kanish Station QR | Find your station, beautifully.">
-  <meta property="og:description" content="Discover station QR references in a fast, easy-to-use, independent directory. Created by Kanish.">
+  <meta property="og:title" content="Kanish Station QR | Every Journey Holds a Feeling">
+  <meta property="og:description" content="A place for journeys, memories and station QR discovery. Crafted with love by Kanish.">
   <meta property="og:url" content="https://utsqr-station-directory.pages.dev/">
   <meta property="og:image" content="https://utsqr-station-directory.pages.dev/assets/icons/icon-512.svg">
   <meta name="twitter:card" content="summary">
@@ -21,13 +21,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>Kanish Station QR | A smarter station directory</title>
+  <link rel="stylesheet" href="love.css">
+  <title>Kanish Station QR | Every Journey Holds a Feeling</title>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"Kanish Station QR","url":"https://utsqr-station-directory.pages.dev/","description":"Independent and unofficial railway station QR directory created by Kanish","inLanguage":"en-IN"}
   </script>
 </head>
 <body>
   <div class="reading-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="love-particles" aria-hidden="true"><span>♡</span><span>✧</span><span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span><span>✦</span><span>♡</span></div>
   <div class="background-orb background-orb--a" aria-hidden="true"></div>
   <div class="background-orb background-orb--b" aria-hidden="true"></div>
   <div class="background-orb background-orb--c" aria-hidden="true"></div>
@@ -44,7 +46,7 @@
         <nav class="top-quick-links" aria-label="Main navigation">
           <a href="#directory">Find a station</a>
           <a href="#features">Features</a>
-          <a href="#about-kanish">About Kanish</a>
+          <a href="#love-letter">Love letter</a><a href="#about-kanish">About Kanish</a>
           <a href="#contact">Contact</a>
         </nav>
         <div class="topbar-actions">
@@ -58,27 +60,28 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-left">
-          <div class="eyebrow"><span class="eyebrow-line"></span> A THOUGHTFUL DIGITAL EXPERIENCE <span class="eyebrow-shine">✦</span></div>
-          <h1 id="hero-title">Every station.<br><span class="gradient-text">One beautiful</span><br>way to find it<span class="punctuation">.</span></h1>
-          <p class="hero-copy">A calmer, faster way to explore railway station QR references. Search by state, discover station codes, preview available entries and keep favorites close.</p>
+          <div class="eyebrow"><span class="eyebrow-line"></span> MADE BY KANISH · WITH A LITTLE LOVE <span class="eyebrow-shine">♡</span></div>
+          <h1 id="hero-title">Every journey<br><span class="gradient-text">holds a feeling</span><span class="punctuation">.</span><br><span class="hero-soft-line">Find your station.</span></h1>
+          <p class="hero-copy">Some journeys take us somewhere new. Others bring us back to a feeling. Explore railway station QR references, find codes and save your favorite stations in a space designed with heart.</p>
+          <p class="hero-whisper">“कुछ सफ़र मंज़िल तक जाते हैं, कुछ यादों तक…” <span>♡</span></p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#directory"><span class="button-sparkle" aria-hidden="true">✦</span> Explore stations <span aria-hidden="true">↗</span></a>
-            <a class="button button-ghost" href="#about-kanish">The story behind it <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#directory"><span class="button-sparkle" aria-hidden="true">♡</span> Explore with love <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#love-letter">Read a little letter <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-meta">
             <div class="mini-avatars" aria-hidden="true"><span>K</span><span>Q</span><span>R</span></div>
-            <div><strong>Made with intention.</strong><small>Designed and maintained by Kanish</small></div>
+            <div><strong>Made with love, not just code.</strong><small>A heartfelt little creation by Kanish</small></div>
           </div>
         </div>
         <div class="hero-right" aria-label="Decorative railway route visualization">
           <div class="visual-glow" aria-hidden="true"></div>
           <div class="visual-panel">
             <div class="visual-panel-head">
-              <span class="visual-panel-logo"><span class="tiny-signal"></span> KANISH / DIRECTORY</span>
+              <span class="visual-panel-logo"><span class="tiny-signal"></span> KANISH / MADE WITH ♡</span>
               <span class="visual-panel-badge">01 / EXPLORE</span>
             </div>
             <div class="network-board">
-              <div class="network-grid" aria-hidden="true"></div>
+              <div class="network-grid" aria-hidden="true"></div><div class="love-moon" aria-hidden="true"><span>✦</span></div>
               <svg class="route-illustration" viewBox="0 0 430 340" aria-hidden="true" focusable="false">
                 <defs><linearGradient id="routeFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#76fbd1"/><stop offset="1" stop-color="#68aafb"/></linearGradient></defs>
                 <path d="M-20 230 C80 230, 70 110, 174 110 S315 265, 460 148" fill="none" stroke="rgba(150,206,236,.11)" stroke-width="56" stroke-linecap="round"/>
@@ -103,32 +106,37 @@
               </div>
             </div>
             <div class="visual-panel-foot">
-              <span><span class="foot-pulse"></span> DESIGNED FOR EVERY COMMUTER</span><span>EST. 2026</span>
+              <span><span class="foot-pulse"></span> DESIGNED FOR EVERY COMMUTER</span><span>MADE WITH ♡</span>
             </div>
           </div>
-          <div class="visual-decoration visual-decoration-one" aria-hidden="true">✧</div>
+          <div class="visual-decoration visual-decoration-one" aria-hidden="true">♡</div>
           <div class="visual-decoration visual-decoration-two" aria-hidden="true">✳</div>
         </div>
       </section>
 
       <div class="marquee-outer" aria-hidden="true">
         <div class="marquee-track">
-          <span>DISCOVER THE DIRECTORY</span><i>✦</i><span>SEARCH WITH EASE</span><i>✦</i><span>SAVE YOUR FAVORITES</span><i>✦</i><span>CURATED BY KANISH</span><i>✦</i>
+          <span>MADE WITH LOVE</span><i>♡</i><span>EVERY JOURNEY HAS A STORY</span><i>✦</i><span>FIND YOUR STATION</span><i>♡</i><span>FROM KANISH, WITH FEELING</span><i>✦</i>
           <span>DISCOVER THE DIRECTORY</span><i>✦</i><span>SEARCH WITH EASE</span><i>✦</i><span>SAVE YOUR FAVORITES</span><i>✦</i><span>CURATED BY KANISH</span><i>✦</i>
         </div>
       </div>
 
+      <section class="love-interlude" aria-label="A little piece of the heart">
+        <span aria-hidden="true" class="interlude-heart">♡</span>
+        <p>“Not every journey brings us together. Some simply leave us with a beautiful memory.”</p>
+        <span class="interlude-signature">— A LITTLE FEELING, FROM KANISH</span>
+      </section>
       <section class="stats-section" aria-label="Directory statistics">
-        <div class="stats-note"><span class="stats-orb">✳</span><div><strong>A growing collection.</strong><small>Entries loaded from our directory.</small></div></div>
+        <div class="stats-note"><span class="stats-orb">♡</span><div><strong>Made to make journeys sweeter.</strong><small>Real entries from our station directory.</small></div></div>
         <div class="stat"><strong id="total-stations">—</strong><span>Station entries</span></div>
         <div class="stat"><strong id="total-states">—</strong><span>States &amp; UTs</span></div>
         <div class="stat"><strong id="total-qr">—</strong><span>Available QR entries</span></div>
       </section>
 
       <section id="directory" class="directory-section" aria-labelledby="search-title">
-        <div class="section-topline"><span class="section-index">01 / THE DIRECTORY</span><span class="section-topline-right">YOUR NEXT STATION STARTS HERE <span aria-hidden="true">↘</span></span></div>
+        <div class="section-topline"><span class="section-index">01 / FIND YOUR WAY ♡</span><span class="section-topline-right">YOUR NEXT STATION STARTS HERE <span aria-hidden="true">↘</span></span></div>
         <div class="section-intro">
-          <div><span class="section-kicker">FIND A STATION</span><h2>Find it in a <em>moment.</em></h2></div>
+          <div><span class="section-kicker">YOUR NEXT LITTLE JOURNEY</span><h2>Find it in a <em>heartbeat.</em></h2></div>
           <p>Type a state or station code. Everything else stays beautifully simple.</p>
         </div>
         <div class="finder-section">
@@ -169,8 +177,8 @@
       </section>
 
       <section id="features" class="features-section" aria-labelledby="features-title">
-        <div class="section-topline"><span class="section-index">02 / DESIGNED WITH PURPOSE</span><span class="section-topline-right">LESS FRICTION. MORE FLOW.</span></div>
-        <div class="section-intro"><div><span class="section-kicker">THE LITTLE DETAILS</span><h2>A better journey, <em>digitally.</em></h2></div><p>Thoughtful tools, polished details and the essentials right where you need them.</p></div>
+        <div class="section-topline"><span class="section-index">02 / MADE WITH CARE</span><span class="section-topline-right">LESS FRICTION. MORE FLOW.</span></div>
+        <div class="section-intro"><div><span class="section-kicker">LOVE IS IN THE LITTLE DETAILS</span><h2>A softer journey, <em>digitally.</em></h2></div><p>Thoughtful tools, polished details and the essentials right where you need them.</p></div>
         <div class="features-grid">
           <article class="feature-card feature-card--spotlight">
             <span class="feature-nr">01 — DISCOVER</span><div class="feature-art feature-art--search" aria-hidden="true"><span class="search-art-input"><i>⌕</i> BR · Bihar</span><span class="search-art-pill">→ PNBE</span></div>
@@ -189,17 +197,56 @@
 
       <section class="about-section" id="about-kanish" aria-labelledby="about-title">
         <div class="about-visual" aria-hidden="true"><span class="about-orbit about-orbit-a"></span><span class="about-orbit about-orbit-b"></span><span class="about-monogram">K<span>.</span></span><small>CREATED WITH CURIOSITY</small></div>
-        <div class="about-copy"><span class="section-index">03 / MEET THE MAKER</span><span class="section-kicker">A NOTE FROM KANISH</span><h2 id="about-title">Human ideas.<br><em>Thoughtful pixels.</em></h2>
-          <p>Hi, I'm <strong>Kanish.</strong> This station directory is a small example of the web experience I love to create: visually considered, easy to navigate, and useful on the move.</p>
-          <p>My focus here is straightforward — make discovering station QR references feel effortless. Every interaction is designed to be simple, smooth and accessible.</p>
+        <div class="about-copy"><span class="section-index">03 / FROM THE CREATOR’S HEART</span><span class="section-kicker">A LITTLE ABOUT KANISH</span><h2 id="about-title">A little code.<br><em>A lot of heart.</em></h2>
+          <p>Hi, I’m <strong>Kanish.</strong> I believe even a simple tool can feel warm, personal and beautiful. This little station directory is where thoughtful design meets the softness of feelings.</p>
+          <p>There is love in small details: a kind word, a gentle color, a journey made easier. Every page carries that idea, along with a little nostalgia for the moments we wish could last longer.</p>
           <div class="about-signature"><span class="signature-line"></span><strong>Kanish</strong><small>Creator &amp; maintainer · Independent project</small></div>
           <a class="about-link" href="https://github.com/arpit-ae/utsqr" target="_blank" rel="noopener noreferrer">Visit the project on GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
+      <section id="love-letter" class="love-letter-section" aria-labelledby="love-letter-title">
+        <div class="section-topline"><span class="section-index">04 / A PAGE FROM THE HEART</span><span class="section-topline-right">SOME STORIES ARE FELT, NOT TOLD <span aria-hidden="true">♡</span></span></div>
+        <div class="love-letter-grid">
+          <div class="letter-introduction">
+            <span class="section-kicker">TO THE BEAUTY OF FEELING</span>
+            <h2 id="love-letter-title">A letter to the<br><em>things we feel.</em></h2>
+            <p>Some love arrives like sunshine. Some stays like moonlight — quiet, distant, but never less beautiful.</p>
+            <p>This is a dedication to the tender moments, the words never spoken, and the memories that made us softer.</p>
+            <div class="love-heart-stamp" aria-hidden="true">♡ <span>WITH LOVE</span></div>
+          </div>
+          <div class="letter-paper">
+            <div class="letter-paper-top"><span>AN UNSENT LITTLE LETTER</span><span class="paper-heart" aria-hidden="true">♥</span></div>
+            <span class="letter-hello">Dear feeling,</span>
+            <p>Maybe love is not always about holding on.</p>
+            <p>Sometimes, it is about wishing someone well, even when the distance grows.</p>
+            <p>About smiling at a memory. About keeping kindness where words fell silent.</p>
+            <p>And about turning a little ache into something beautiful.</p>
+            <div class="letter-handwriting">With all the love I never knew how to explain,</div>
+            <div class="letter-signature">Kanish <span>♡</span></div>
+            <div class="letter-seal" aria-hidden="true">K</div>
+          </div>
+        </div>
+        <div class="feeling-carousel">
+          <div class="feeling-heading"><span class="feeling-icon" aria-hidden="true">✧</span><div><span class="micro-label">A LITTLE SOFTNESS, JUST FOR TODAY</span><h3>Sometimes the heart speaks quietly.</h3></div></div>
+          <div class="feeling-message">
+            <p id="feeling-text" aria-live="polite">“Some people become memories. Some memories become a part of us.”</p>
+            <div class="feeling-actions"><span id="feeling-count" aria-live="polite">01 / 05</span><button id="next-feeling" type="button" aria-label="Read another heartfelt note">Another feeling <span aria-hidden="true">♡</span></button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="memory-section" aria-labelledby="memory-title">
+        <div class="memory-heading"><span class="section-kicker">THE BEAUTIFUL IN-BETWEEN</span><h2 id="memory-title">A little love.<br><em>A little longing.</em></h2><p>Because even the quietest emotions deserve a beautiful place.</p></div>
+        <div class="memory-grid">
+          <article class="memory-card"><span class="memory-symbol" aria-hidden="true">✧</span><span class="memory-index">01 / WARMTH</span><h3>For all the little hellos.</h3><p>The beginnings that made ordinary days feel like magic.</p></article>
+          <article class="memory-card"><span class="memory-symbol" aria-hidden="true">☾</span><span class="memory-index">02 / DISTANCE</span><h3>For what stayed unsaid.</h3><p>The gentle sadness of words we carried but never shared.</p></article>
+          <article class="memory-card"><span class="memory-symbol" aria-hidden="true">♡</span><span class="memory-index">03 / FOREVER</span><h3>For the beautiful memories.</h3><p>Some moments pass. The tenderness they leave can remain.</p></article>
+        </div>
+      </section>
       <section class="contribute-section" id="contact" aria-labelledby="contribute-title">
         <div class="contribute-glow" aria-hidden="true"></div>
-        <div class="contribute-content"><span class="section-index">04 / LET'S MAKE IT BETTER</span><h2 id="contribute-title">Know a missing station?<br><em>Let's improve the directory.</em></h2><p>Found a missing QR entry or want to report a correction? Open a GitHub issue with the station code and state. Avoid posting private information.</p>
+        <div class="contribute-content"><span class="section-index">05 / LET’S MAKE IT BETTER</span><h2 id="contribute-title">Know a missing station?<br><em>Let's improve the directory.</em></h2><p>Found a missing QR entry or want to report a correction? Open a GitHub issue with the station code and state. Avoid posting private information.</p>
           <div class="contribute-actions"><a class="button button-primary" href="https://github.com/arpit-ae/utsqr/issues/new?title=Station%20QR%20Directory%20Contribution&body=State%2FUT%3A%20%0AStation%20code%3A%20%0ADetails%20or%20source%3A%20" target="_blank" rel="noopener noreferrer">Submit a station issue <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://github.com/arpit-ae/utsqr/issues" target="_blank" rel="noopener noreferrer">View requests <span aria-hidden="true">↗</span></a></div>
         </div>
         <div class="contribute-mark" aria-hidden="true">K</div>
@@ -210,9 +257,9 @@
 
     <footer class="footer">
       <div class="footer-inner">
-        <div class="footer-main"><a href="#top" class="footer-brand">KANISH<span>.</span></a><p>Making a little corner of the internet more beautiful and useful.</p><span class="footer-sub">STATION QR DIRECTORY · AN INDEPENDENT PROJECT</span></div>
-        <div class="footer-links"><div><strong>EXPLORE</strong><a href="#directory">Directory</a><a href="#features">Features</a><a href="#about-kanish">About Kanish</a></div><div><strong>INFORMATION</strong><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a><a href="LICENSE">Source code license</a></div><div><strong>CONNECT</strong><a href="https://github.com/arpit-ae/utsqr" target="_blank" rel="noopener noreferrer">GitHub project ↗</a><a href="https://github.com/arpit-ae/utsqr/issues" target="_blank" rel="noopener noreferrer">Contact / Issues ↗</a></div></div>
-        <div class="footer-bottom"><span>© <span id="current-year">2026</span> Kanish. Designed with care.</span><span>MADE TO MOVE WITH YOU <span aria-hidden="true">✦</span></span><a href="#top">Back to top ↑</a></div>
+        <div class="footer-main"><a href="#top" class="footer-brand">KANISH<span>.</span></a><p>Some feelings cannot be put into words. So I put a little of them into this website. ♡</p><span class="footer-sub">STATION QR DIRECTORY · AN INDEPENDENT PROJECT</span></div>
+        <div class="footer-links"><div><strong>EXPLORE</strong><a href="#directory">Directory</a><a href="#features">Features</a><a href="#love-letter">Love letter ♡</a><a href="#about-kanish">About Kanish</a></div><div><strong>INFORMATION</strong><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a><a href="LICENSE">Source code license</a></div><div><strong>CONNECT</strong><a href="https://github.com/arpit-ae/utsqr" target="_blank" rel="noopener noreferrer">GitHub project ↗</a><a href="https://github.com/arpit-ae/utsqr/issues" target="_blank" rel="noopener noreferrer">Contact / Issues ↗</a></div></div>
+        <div class="footer-bottom"><span>© <span id="current-year">2026</span> Kanish. Created with love, care & quiet emotion.</span><span>MADE WITH LOVE & A LITTLE LONGING <span aria-hidden="true">♡</span></span><a href="#top">Back to top ↑</a></div>
       </div>
     </footer>
   </div>
@@ -220,5 +267,6 @@
   <button id="install-btn" class="install-float" type="button" hidden>✦ Install directory</button>
   <script src="data/manifest.js"></script>
   <script src="app.js"></script>
+  <script defer src="love.js"></script>
 </body>
 </html>
