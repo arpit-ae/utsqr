@@ -454,9 +454,9 @@
     }
 
     const items = [
-      { text: "Verified Platform", className: "status-pill-verified" },
+      { text: "Independent Directory", className: "status-pill-verified" },
       { text: "Mobile Optimized", className: "status-pill-mobile" },
-      { text: "24/7 Available", className: "status-pill-available" }
+      { text: "Quick Station Lookup", className: "status-pill-available" }
     ];
 
     let index = 0;
