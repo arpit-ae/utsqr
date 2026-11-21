@@ -1,0 +1,301 @@
+/* KANISH / HEART EDITION — dreamy, accessible romantic atmosphere */
+:root{
+  --bg:#160d21;
+  --bg-deep:#0f0b1b;
+  --surface:#28192f;
+  --surface-raised:#36223f;
+  --border:rgba(255,199,226,.19);
+  --border-strong:rgba(255,198,229,.36);
+  --ink:#fff4f9;
+  --soft-ink:#ddc3d4;
+  --muted:#bda4bb;
+  --mint:#ffb4d6;
+  --sky:#c8b4ff;
+  --lime:#ffe1c9;
+  --accent:#ffb4d6;
+  --accent-2:#c8b4ff;
+}
+body{
+  background:#150c20;
+  color:#fff4fa;
+}
+body::before{
+  background:
+    radial-gradient(ellipse 85% 45% at 18% 0%,rgba(130,39,100,.42) 0%,transparent 70%),
+    radial-gradient(ellipse 65% 55% at 100% 32%,rgba(104,63,150,.31) 0%,transparent 70%),
+    radial-gradient(ellipse 60% 48% at 2% 80%,rgba(169,70,118,.18) 0%,transparent 78%),
+    linear-gradient(140deg,#160c22,#180f28 48%,#110b1e);
+}
+::selection{background:#ffbbdc;color:#35142d}
+.background-orb--a{background:rgba(248,83,161,.25);filter:blur(115px)}
+.background-orb--b{background:rgba(154,116,251,.21);filter:blur(110px)}
+.background-orb--c{background:rgba(255,157,180,.14);filter:blur(100px)}
+.reading-progress{background:linear-gradient(90deg,#ff96c7,#b6b5ff,#ffe2ed)}
+:focus-visible{outline-color:#ffc7e7}
+.site-header{background:rgba(21,12,32,.76);border-color:#ffdaef1a}
+.brand-icon{background:linear-gradient(140deg,#ffc5e5,#c8b7ff);color:#43223f;box-shadow:0 8px 35px #ff87c133}
+.brand-icon i,.live-dot,.tiny-signal,.foot-pulse{background:#ffd3e7;box-shadow:0 0 0 4px #ffa5cf1c}
+.brand-copy strong,.brand-lockup{color:#fff0f9}
+.brand-dot,.brand-copy small,.eyebrow,.section-index,.section-kicker,.micro-label{color:#ffb8d9}
+.top-quick-links a{color:#e8cbdc}
+.top-quick-links a:hover{color:#fff}
+.status-pill{color:#ffdfec}
+.topbar-cta{background:linear-gradient(110deg,#ffc5e1,#d7c3ff);color:#30182c}
+.topbar-cta:hover{box-shadow:0 8px 28px #ef86c755}
+.hero{position:relative}
+.hero::after{
+  content:"♡";position:absolute;left:44%;top:17%;font:100 105px/1 "Space Grotesk";
+  color:#ffb4d608;transform:rotate(-21deg);pointer-events:none;
+}
+.hero h1{color:#fff5fc}
+.hero-soft-line{font-size:.63em;font-weight:500;letter-spacing:-.06em;color:#ffe5f4}
+.hero .gradient-text,.section-intro h2 em,.about-copy h2 em,.contribute-content h2 em,.memory-heading h2 em,.letter-introduction h2 em{
+  background:linear-gradient(110deg,#ffd3e7 0%,#f9a7cf 40%,#bdadff 86%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.punctuation{color:#ffb1d7}
+.eyebrow-line{background:#fba6d4}
+.hero-copy{color:#e6cbdc}
+.hero-whisper{font:500 clamp(12px,1.2vw,14px)/1.8 "Manrope",sans-serif;margin:18px 0 0;color:#f7bada;font-style:italic;letter-spacing:.012em}
+.hero-whisper span{font-size:20px;margin-left:7px;vertical-align:middle;color:#f8a2c5}
+.button-primary,.find-btn{background:linear-gradient(115deg,#ffc5e0,#ffaed5 45%,#d4bbff);color:#351a36;box-shadow:0 9px 32px #ff84be1b}
+.button-primary:hover,.find-btn:hover{box-shadow:0 12px 40px #ed89cc43}
+.button-ghost{border-color:#ffc4e33f;background:#ffe5f009;color:#ffe1f3}
+.button-ghost:hover{background:#ffe1ee18}
+.hero-meta strong{color:#ffeff8}
+.hero-meta small,.hero-meta div:last-child small{color:#d6b5c9}
+.mini-avatars span{border-color:#221129;background:#fbd6e5;color:#64304e}
+.mini-avatars span:nth-child(2){background:#d7caff}
+.mini-avatars span:nth-child(3){background:#ffcbb9}
+.visual-glow{background:radial-gradient(ellipse,#f26fb53b,transparent 69%)}
+.visual-panel{background:linear-gradient(138deg,rgba(73,37,72,.87),rgba(36,19,50,.94) 54%,rgba(44,33,70,.9));border-color:#ffcae64a;box-shadow:0 50px 95px #06011199,inset 0 1px #ffebf122}
+.visual-panel-logo{color:#ffe9f4}
+.visual-panel-head,.visual-panel-foot,.visual-panel-badge{color:#e6c5dd}
+.network-board{border-color:#ffcbeb2a;background:radial-gradient(ellipse at 50% 25%,rgba(146,88,148,.34),transparent 66%),linear-gradient(150deg,#33213f,#26172f)}
+.network-grid{background-image:linear-gradient(#f6c5e80b 1px,transparent 1px),linear-gradient(90deg,#f6c5e80b 1px,transparent 1px)}
+.animated-route{filter:hue-rotate(114deg) saturate(.9) drop-shadow(0 0 3px #e1a2ff)}
+.floating-ticket{background:rgba(50,27,58,.82);border-color:#ffc8e549}
+.floating-ticket strong{color:#ffedf6}
+.floating-ticket small{color:#e4bad8}
+.ticket-icon{background:#ffc4e0;color:#4e264d}
+.ticket-arrow{color:#ffc1e0}
+.visual-decoration{color:#ffb9db;text-shadow:0 0 35px #ff9bdacc}
+.visual-decoration-one{font-size:68px}
+.love-moon{position:absolute;top:18%;left:19%;width:66px;height:66px;box-shadow:0 0 60px #f7a5e766;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff6ff,#ffd4ea 48%,#dda6f0);opacity:.85;animation:moon-glow 7s ease-in-out infinite alternate}
+.love-moon span{position:absolute;right:-14px;top:-17px;color:#ffe5f2;font-size:20px}
+.marquee-outer{background:#fff0f807;border-color:#ffd3e31e}
+.marquee-track span{color:#e9c8da}
+.marquee-track i{color:#ffbedf}
+.stats-orb{background:#ffc2dd20;color:#ffb4d4}
+.stat{border-color:#ffd1e52b}
+.stats-section{border-color:#ffd1e52b}
+.stat span,.stats-note small{color:#ceb2c8}
+.section-topline{border-color:#ffd1e52b}
+.section-topline-right{color:#c9abc5}
+.section-intro>p,.about-copy>p,.feature-copy p{color:#d5b7ce}
+.panel{
+  border-color:#ffd1e52d;
+  background:linear-gradient(145deg,rgba(61,31,68,.77),rgba(33,19,47,.93));
+  box-shadow:inset 0 1px #ffffff10,0 22px 60px #12061544;
+}
+.panel-header-icon{background:#ffcae812;color:#f9b1d8;border-color:#f9b1d82b}
+.panel-header h3,.favorites-heading h3{color:#fff1f9}
+.field>span{color:#ffdded}
+.field-number{color:#ffbbdf}
+.field input{background:#201327c9;border-color:#ffbee434;color:#fff4fa}
+.field input::placeholder{color:#bd9cb6}
+.field input:focus{border-color:#f6a9d1;box-shadow:0 0 0 3px #fab6d81e;background:#2d1b38}
+.field input:hover{border-color:#ffb6dc75}
+.search-help,.meta,.micro-label{color:#d2b2c9}
+kbd{border-color:#f9b7da77;color:#ffe5f3}
+.quick-access-row{border-color:#ffd1e52b}
+.quick-pick,.fav-pill button{background:#ffc3e315;border-color:#f7bcda4a;color:#ffe6f3}
+.quick-pick:hover,.fav-pill button:hover{background:#ffd0e6;color:#4c1b36}
+.secondary-btn,.tiny-btn{border-color:#ffbce34a;color:#ffedf7;background:#ffdae812}
+.secondary-btn:hover,.tiny-btn:hover{background:#ffd5e927}
+.action-row button span{color:#ffb4d6}
+.action-status{color:#ffbdda}
+.result-empty,.result-missing,.result-card{background:#1d112bc9;border-color:#edbee749}
+.result-empty>strong,.result-title{color:#fff0fa}
+.result-empty>p,.result-subtitle,.result-disclaimer{color:#cbb0c7}
+.empty-icon{background:linear-gradient(135deg,#603252,#33214c);border-color:#ffc3e055}
+.empty-icon span{color:#ffb9db}
+.empty-icon i{background:#c5aaff;border-color:#3b2450;box-shadow:0 0 20px #c5aaff88}
+.result-card img{background:white;border-color:#f2dbea6b}
+.favorites-icon{background:#ffbad42b;color:#ffb4d8;border-color:#ffd0e543}
+.fav-empty{color:#d2b9ca}
+.fav-pill{background:#2c1b39;border-color:#ffd1e52a}
+.fav-pill button:last-child{color:#ffc4d5}
+.feature-card{
+  border-color:#ffcbdf35;background:linear-gradient(144deg,#432943,#27172f);
+  box-shadow:0 15px 40px #0d061427;
+}
+.feature-card--spotlight{background:linear-gradient(152deg,#59304e,#2d1a37)}
+.feature-card:hover{border-color:#ffc0e47f;box-shadow:0 28px 60px #13071d73}
+.feature-nr{color:#f4bad8}
+.feature-art--search::before{background:#fb8ac03d}
+.search-art-input{background:#321f3e;border-color:#ffb9d77f;color:#ffe6f4}
+.search-art-input i{color:#ffb9d9}
+.search-art-pill{background:#ffd0e7;color:#4b2942}
+.feature-art--qr .mock-qr{background:#ffe4f0}
+.mock-qr b{background:#803d6d}
+.feature-art--qr>span{color:#f9c5df}
+.feature-art--favorite>span:first-child{color:#ffc9e6;background:#f7a6ce24;border-color:#ffcbe94d;text-shadow:0 0 40px #f9add8}
+.favorite-stars{color:#e3c7ff}
+.about-visual{background:radial-gradient(circle at center,#653659 0%,#3b264d 42%,#2a1a3b 81%);border-color:#fbc2dc50}
+.about-visual::before,.about-visual::after{border-color:#ffd7e232}
+.about-orbit{border-color:#ffc5d87b}
+.about-orbit-b{border-color:#cebaff8a}
+.about-monogram{color:#ffe0ef;text-shadow:0 0 75px #ff8bbb75}
+.about-monogram span{color:#c9b1ff}
+.about-visual small{color:#f3bfda}
+.about-copy>p strong{color:#ffcae4}
+.signature-line{background:#ffadd3}
+.about-signature strong,.about-link{color:#ffd0e6}
+.about-link{border-color:#ffbadb77}
+.contribute-section{background:linear-gradient(112deg,#6d385e,#512e62 60%,#35274f);border-color:#ffd1e574}
+.contribute-glow{background:radial-gradient(circle,#ffa5da3b,transparent 70%)}
+.contribute-content>p{color:#f5d3e6}
+.contribute-mark{color:#ffdcf012}
+.notice-panel{background:#ffeff605;border-color:#ffd2e22b}
+.notice-icon{border-color:#ffd1e57a;color:#ffcae4}
+.notice-panel h3,.notice-panel a{color:#ffe0ed}
+.notice-panel p{color:#cdb2c7}
+.footer{background:#11091cbd;border-color:#ffd0e42b}
+.footer-brand span{color:#ffabd3}
+.footer-main p,.footer-links a{color:#d6b9d0}
+.footer-sub,.footer-bottom{color:#ae8ca9}
+.footer-links strong,.footer-bottom span span,.footer-bottom>a{color:#ffc3e1}
+.footer-bottom{border-color:#ffd0e42b}
+.install-float{background:#ffbadc;border-color:#ffe2f0;color:#36183a}
+.install-float:hover{background:#ffd3e8}
+.policy-back,.policy-section a{color:#ffc1e0}
+.policy-section p,.policy-section li{color:#dfc1d4}
+
+/* Floating hearts — subtle; never interfere with interface */
+.love-particles{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict}
+.love-particles span{position:absolute;bottom:-80px;color:#ffb4d6;opacity:0;font:400 26px/1 "Space Grotesk";animation:heart-rise 19s linear infinite;filter:drop-shadow(0 0 9px #fcaed955)}
+.love-particles span:nth-child(1){left:4%;animation-delay:0s;font-size:34px}
+.love-particles span:nth-child(2){left:14%;animation-delay:-9s;font-size:18px}
+.love-particles span:nth-child(3){left:29%;animation-delay:-3s;font-size:24px}
+.love-particles span:nth-child(4){left:41%;animation-delay:-15s;font-size:14px}
+.love-particles span:nth-child(5){left:58%;animation-delay:-6s;font-size:32px}
+.love-particles span:nth-child(6){left:69%;animation-delay:-12s;font-size:21px}
+.love-particles span:nth-child(7){left:82%;animation-delay:-2s;font-size:23px}
+.love-particles span:nth-child(8){left:92%;animation-delay:-17s;font-size:17px}
+.love-particles span:nth-child(9){left:48%;animation-delay:-19s;font-size:15px}
+.site-wrap{position:relative;z-index:1}
+
+/* Quiet poetry between functional sections */
+.love-interlude{padding:42px 20px 48px;text-align:center;position:relative;background:radial-gradient(ellipse at center,#ff98d10e,transparent 70%)}
+.interlude-heart{display:block;font-size:42px;color:#f8a5d1;margin-bottom:10px;animation:quiet-heart 4.6s ease-in-out infinite}
+.love-interlude p{margin:0 auto 14px;max-width:720px;font:400 clamp(17px,2.15vw,29px)/1.55 "Space Grotesk";letter-spacing:-.025em;color:#ffe0ed}
+.interlude-signature{font:500 9px/1.6 "DM Mono";letter-spacing:.2em;color:#bfa6bf}
+
+/* Romantic dedication, with a real interactive letter */
+.love-letter-section{padding:100px clamp(20px,6.1vw,98px) 65px}
+.love-letter-grid{margin-top:52px;display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);align-items:center;gap:clamp(25px,6vw,100px)}
+.letter-introduction h2,.memory-heading h2{font:600 clamp(39px,5vw,74px)/1.08 "Space Grotesk";letter-spacing:-.06em;margin:10px 0 26px}
+.letter-introduction h2 em,.memory-heading h2 em{font-style:normal}
+.letter-introduction>p{font-size:13px;line-height:2.1;color:#dfc4d5;max-width:485px;margin:0 0 17px}
+.love-heart-stamp{display:flex;align-items:center;gap:14px;margin-top:36px;font:400 47px/1 "Space Grotesk";color:#ffb2d9}
+.love-heart-stamp span{font:500 10px "DM Mono";letter-spacing:.2em;color:#dfb7ce}
+.letter-paper{
+ position:relative;isolation:isolate;overflow:hidden;padding:clamp(27px,4vw,54px);
+ border-radius:26px 26px 30px 30px;background:
+ radial-gradient(circle at 95% 10%,rgba(255,222,238,.8),transparent 55%),
+ linear-gradient(160deg,#fff5f4 0%,#fbe6ea 58%,#f8dfe7);
+ color:#5b344b;border:1px solid #fff5fa;
+ box-shadow:0 35px 90px #08021170,0 0 0 9px #ffd9e00a;
+ transform:rotate(1deg);transition:transform .6s cubic-bezier(.22,1,.36,1);
+}
+.letter-paper:hover{transform:rotate(0) translateY(-4px)}
+.letter-paper:before{content:"";position:absolute;inset:12px;z-index:-1;border:1px solid #98607730;border-radius:17px;pointer-events:none}
+.letter-paper-top{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #cba5b68a;padding-bottom:22px;margin-bottom:30px;font:500 9px "DM Mono";color:#9d6780;letter-spacing:.15em}
+.paper-heart{font:700 29px "Space Grotesk";color:#b25a81}
+.letter-hello{display:block;font:500 29px "Space Grotesk";letter-spacing:-.035em;margin-bottom:26px;color:#70415f}
+.letter-paper p{font:400 clamp(13px,1.25vw,15px)/2 "Manrope";color:#654759;margin:0 0 15px;max-width:460px}
+.letter-handwriting{font:italic 14px/1.9 Georgia,serif;color:#956277;margin:24px 0 5px}
+.letter-signature{font:600 33px/1.1 "Space Grotesk";letter-spacing:-.05em;color:#9e527b}
+.letter-signature span{color:#d57a9e}
+.letter-seal{position:absolute;right:clamp(21px,4vw,49px);bottom:32px;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 35% 26%,#c76e99,#8d3c67);color:#f9dce9;font:600 25px "Space Grotesk";box-shadow:0 6px 20px #ab56735c,0 0 0 5px #bd688e55}
+
+/* Interactive heartfelt lines */
+.feeling-carousel{display:grid;grid-template-columns:.84fr 1.16fr;gap:30px;align-items:center;margin-top:75px;padding:25px 32px;border-radius:24px;border:1px solid #ffd5e349;background:linear-gradient(115deg,#432442c2,#271a3dc9)}
+.feeling-heading{display:flex;gap:16px;align-items:center}
+.feeling-icon{display:grid;place-items:center;flex:none;width:57px;height:57px;border-radius:18px;background:#ffaac821;color:#ffd2e9;font-size:29px;border:1px solid #ffaed750}
+.feeling-heading h3{font:600 20px/1.3 "Space Grotesk";margin:6px 0 0;letter-spacing:-.02em}
+.feeling-message{padding-left:28px;border-left:1px solid #ffc4df42}
+.feeling-message>p{font:400 clamp(14px,1.5vw,19px)/1.7 Georgia,serif;font-style:italic;min-height:64px;color:#ffe1ee;margin:0 0 22px}
+.feeling-actions{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.feeling-actions>span{font:500 10px "DM Mono";letter-spacing:.13em;color:#d0a5c8}
+.feeling-actions button{background:#ffb6d631;color:#ffe0ed;border:1px solid #ffd2e55a;border-radius:999px;padding:11px 17px;font-size:11px;font-weight:800;transition:transform .25s,background .25s}
+.feeling-actions button:hover{transform:translateY(-2px);background:#ffb6d653}
+.feeling-actions button span{margin-left:10px;color:#ffd3e5;font-size:18px}
+
+/* A gentle arc from warmth to distance to memory */
+.memory-section{padding:50px clamp(20px,6.1vw,98px) 125px}
+.memory-heading{max-width:700px;margin:0 auto 45px;text-align:center}
+.memory-heading p{font:400 13px/1.8 "Manrope";color:#d8b9d0}
+.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.memory-card{min-height:285px;position:relative;overflow:hidden;border:1px solid #ffcfe336;border-radius:26px;background:linear-gradient(145deg,#4a2b49c9,#251730ed);padding:28px;display:flex;flex-direction:column;transition:transform .4s,border-color .4s,box-shadow .4s}
+.memory-card:nth-child(2){background:linear-gradient(145deg,#3a2b57,#21182f)}
+.memory-card:nth-child(3){background:linear-gradient(145deg,#543044,#25182e)}
+.memory-card:hover{transform:translateY(-8px);border-color:#ffaddb8c;box-shadow:0 25px 55px #09011260}
+.memory-symbol{font:400 57px/1 "Space Grotesk";color:#ffc4dc;margin-bottom:auto;filter:drop-shadow(0 0 20px #ff9fcd55)}
+.memory-card:nth-child(2) .memory-symbol{color:#cbbcff}
+.memory-index{font:500 9px/1.6 "DM Mono";letter-spacing:.16em;color:#eebad9;margin-bottom:12px}
+.memory-card h3{font:600 22px/1.2 "Space Grotesk";letter-spacing:-.03em;color:#fff0fa;margin:0 0 10px}
+.memory-card p{font:400 12px/1.85 "Manrope";color:#d6b7d0;margin:0}
+
+/* Ensure only meaningful things animate; speed and motion are user-controlled */
+@keyframes heart-rise{
+  0%{transform:translate3d(0,0,0) rotate(-8deg) scale(.75);opacity:0}
+  13%{opacity:.17}
+  75%{opacity:.22}
+  100%{transform:translate3d(35px,-110vh,0) rotate(19deg) scale(1.08);opacity:0}
+}
+@keyframes quiet-heart{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.13);opacity:1}}
+@keyframes moon-glow{to{filter:brightness(1.12);transform:translateY(-6px)}}
+@media(max-width:1000px){
+  .love-letter-grid{gap:32px}
+  .letter-paper p{font-size:13px}
+  .feeling-carousel{grid-template-columns:1fr}
+  .feeling-message{border-left:0;border-top:1px solid #ffc4df42;padding:20px 0 0}
+}
+@media(max-width:760px){
+  .love-letter-section{padding-top:80px}
+  .love-letter-grid{grid-template-columns:1fr;gap:33px;margin-top:32px}
+  .letter-introduction h2,.memory-heading h2{font-size:clamp(39px,8vw,62px)}
+  .letter-paper{max-width:600px;margin:0 auto;width:100%;transform:none}
+  .letter-paper:hover{transform:translateY(-3px)}
+  .memory-grid{grid-template-columns:1fr;gap:13px}
+  .memory-card{min-height:226px}
+  .memory-symbol{font-size:42px;margin-bottom:25px}
+  .memory-section{padding-bottom:85px}
+  .feeling-carousel{margin-top:40px}
+}
+@media(max-width:620px){
+  .love-interlude{padding:37px 22px}
+  .love-interlude p{font-size:18px}
+  .hero-soft-line{display:inline-block;margin-top:5px}
+  .hero-whisper{font-size:12px}
+  .love-letter-section{padding:74px 20px 30px}
+  .letter-paper{padding:34px 27px 40px}
+  .letter-paper p{font-size:13px;line-height:1.9}
+  .letter-seal{bottom:25px;right:24px;width:45px;height:45px;font-size:23px}
+  .letter-signature{font-size:29px}
+  .feeling-carousel{padding:22px 19px}
+  .feeling-heading h3{font-size:18px}
+  .feeling-message>p{font-size:16px}
+  .memory-section{padding:38px 20px 86px}
+  .memory-heading{margin-bottom:30px}
+  .memory-card{padding:23px}
+  .visual-decoration-one{font-size:48px}
+  .love-moon{width:45px;height:45px}
+}
+@media(prefers-reduced-motion:reduce){
+  .love-particles span,.interlude-heart,.love-moon{animation:none!important}
+  .love-particles{display:none}
+  .letter-paper,.letter-paper:hover,.memory-card:hover{transform:none}
+}
