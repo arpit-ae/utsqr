@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Contact the owner
-    url: https://contact.mridungupta.eu.org
-    about: Questions not related to bugs or features belong here.
+  - name: Contact Kanish
+    url: https://github.com/arpit-ae/utsqr/issues
+    about: Ask a question or report a content concern to the project maintainer.
