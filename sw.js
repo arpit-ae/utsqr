@@ -1,4 +1,4 @@
-const CACHE_VERSION = "kanish-station-qr-v4";
+const CACHE_VERSION = "kanish-station-qr-v5";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -8,7 +8,9 @@ const SHELL_ASSETS = [
   "privacy.html",
   "disclaimer.html",
   "styles.css",
+  "love.css",
   "app.js",
+  "love.js",
   "data/manifest.js",
   "manifest.webmanifest",
   "assets/icons/icon.svg",
