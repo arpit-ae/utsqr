@@ -1,13 +1,13 @@
 {
   "name": "Kanish Station QR",
   "short_name": "Kanish QR",
-  "description": "Kanish independent station QR directory for quick station search.",
+  "description": "Kanish Station QR: a dreamy, love-inspired independent station QR directory.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#081523",
-  "theme_color": "#081523",
+  "background_color": "#160d21",
+  "theme_color": "#160d21",
   "lang": "en-IN",
   "categories": ["travel", "utilities"],
   "icons": [
