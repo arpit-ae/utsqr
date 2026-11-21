@@ -1,13 +1,13 @@
 {
-  "name": "UTS QR Finder",
-  "short_name": "UTS QR",
-  "description": "Unofficial UTS QR finder for quick station QR access.",
+  "name": "Kanish Station QR",
+  "short_name": "Kanish QR",
+  "description": "Kanish independent station QR directory for quick station search.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f9f7f2",
-  "theme_color": "#d97706",
+  "background_color": "#081523",
+  "theme_color": "#081523",
   "lang": "en-IN",
   "categories": ["travel", "utilities"],
   "icons": [
