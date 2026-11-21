@@ -1,8 +1,8 @@
-# UTS QR Finder (Unofficial)
+# Kanish Station QR (Unofficial)
 
 A fast, commuter-friendly web app to find and open UTS station QR codes by State/UT and Station Code.
 
-This repository is an unofficial utility project.
+This is an unofficial station QR directory maintained by **Kanish**. It is not affiliated with Indian Railways. This repository is based on an existing MIT-licensed open-source directory; the LICENSE file is retained, and third-party QR assets are not covered by its MIT grant.
 
 ## Features
 
